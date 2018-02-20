@@ -1,6 +1,6 @@
 import React from 'react';
-import { ART, StyleSheet, Text, View } from 'react-native';
-import { Font } from 'expo';
+import { StyleSheet, Text, View } from 'react-native';
+import { Svg, Font } from 'expo';
 
 export default class App extends React.Component {
   state = {
@@ -25,22 +25,18 @@ export default class App extends React.Component {
         <Text
           style={{
             fontFamily: 'IndieFlower',
-            fontSize: 14
+            fontSize: 14,
+            height: 50,
+            width: 100
           }}
         >
           {'<Text/>'}
         </Text>
-        <ART.Surface height={50} width={100}>
-          <ART.Text
-            font={{
-              fontFamily: 'IndieFlower',
-              fontSize: 14
-            }}
-            fill="#000"
-          >
-            {'<ART.Text/>'}
-          </ART.Text>
-        </ART.Surface>
+        <Svg height={50} width={100}>
+          <Svg.Text fontFamily="IndieFlower" fontSize={14}>
+            {'<Svg.Text/>'}
+          </Svg.Text>
+        </Svg>
       </View>
     );
   }
